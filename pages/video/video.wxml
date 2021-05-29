@@ -1,0 +1,81 @@
+<view class="video-container">
+  <scroll-view
+    class="top-tab-container"
+    scroll-x
+    enable-flex
+    scroll-into-view="{{'zh' + activeIndex}}"
+    scroll-with-animation
+  >
+    <view 
+      class="top-tab-item" 
+      wx:for="{{tabList}}" 
+      wx:key="id" 
+      bindtap="handleChangeIndex"
+      data-videoId="{{item.id}}"
+      id="{{'zh' + item.id}}"
+    >
+      <view 
+        class="{{item.id === activeIndex ? 'active' : ''}}"
+      >{{item.name}}</view>
+    </view>
+  </scroll-view>
+  
+  <!-- 视频列表 -->
+  <scroll-view 
+    class="video-list-wrapper"
+    scroll-y
+    refresher-enabled
+    bindrefresherrefresh="handleLowerFresh"
+    refresher-triggered="{{isLowerFresh}}"
+    bindscrolltolower="handleToLower"
+  >
+    <view 
+      class="video-list-item"
+      wx:for="{{videoList}}"
+      wx:key="threadId"
+    >
+    <!-- 每一项的头部 -->
+      <view class="item-header">
+        <image src="{{item.creator.avatarUrl}}"></image>
+        <view class="video-user">{{item.creator.nickname}}</view>
+        <view class="right-operate">
+          <view class="operate-item">
+            <text class="iconfont iconxinaixin"></text>
+            <text class="star">{{item.praisedCount}}</text>
+          </view>
+          <view class="operate-item">
+            <text class="iconfont iconpinglunliebiao"></text>
+            <text class="comment">{{item.commentCount}}</text>
+          </view>
+          <button 
+            class="operate-item btn"
+            open-type="share"
+            id="{{item.vid}}"
+          >
+            <text class="iconfont icongengduo"></text>
+          </button>
+        </view>
+      </view>
+      <!-- 视频部分 -->
+      <view class="item-video">
+        <video 
+          src="{{item.urlInfo.url}}"
+          bindplay="handlePlay" 
+          object-fit="cover"
+          wx:if="{{vidId === item.vid}}"
+          id="{{item.vid}}"
+          bindtimeupdate="handleTimeUpdate"
+          bindended="handleEnded"
+        ></video>
+        <image 
+          src="{{item.coverUrl}}"
+          bindtap="handlePlay"
+          id="{{item.vid}}"
+          wx:else
+        ></image>
+      </view>
+      <!-- 视频介绍 -->
+      <view class="item-footer">{{item.title}}</view>
+    </view>
+  </scroll-view>
+</view>

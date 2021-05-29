@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "NavHeader": "/components/NavHeader/NavHeader"
+  },
+  "navigationBarBackgroundColor": "#d43c33",
+  "navigationBarTitleText": "臻尚云音乐"
+}

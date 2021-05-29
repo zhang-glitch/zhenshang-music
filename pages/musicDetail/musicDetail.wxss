@@ -1,0 +1,129 @@
+.music-detail {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#9452A5, #FFF5C3);
+}
+
+.music-detail .music-detail-header {
+  text-align: center;
+  font-size: 32rpx;
+  color: #eee;
+  font-weight: 600;
+}
+
+/* .circle {
+  width: 60rpx;
+  height: 60rpx;
+  background:#ffffff;
+  border-radius: 50%;
+  margin: 20rpx auto;
+}
+
+.needle-wrapper image {
+  width: 192rpx;
+  height: 274rpx;
+} */
+
+.disc-container {
+  position: relative;
+  width: 598rpx;
+  height: 598rpx;
+  margin: auto;
+  margin-top: 60rpx;
+}
+
+.disc {
+  width: 598rpx;
+  height: 598rpx;
+  position: absolute;
+}
+
+.disc-nimate {
+  animation: disc 8s linear infinite;
+}
+
+@keyframes disc {
+  from {
+    transform: translate(0, 0);
+    transform: rotate(0);
+  }
+  to {
+    transform: translate(0, 0);
+    transform: rotate(360deg);
+  }
+}
+
+.music-bgc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+.progress-container {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 200rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  color: #fff;
+}
+
+.progress {
+  position: relative;
+  width: 430rpx;
+  height: 4rpx;
+  background: #5f6064;
+  margin: auto;
+}
+
+.progress .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rpx;
+  background: #8d8f92;
+}
+
+.progress .progress-circle {
+  position: absolute;
+  /* right: -12rpx; */
+  left: 0;
+  top: -4rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.play-operate {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 40rpx;
+}
+
+.play-operate .iconfont {
+  display: block;
+  width: 20%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.play-operate .iconbofang, .play-operate .iconzanting {
+  font-size: 80rpx;
+}
+

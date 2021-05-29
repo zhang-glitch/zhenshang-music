@@ -1,0 +1,17 @@
+<view class="recent-play-music">
+  <view class="recomment-operate">
+    <view class="all-play">
+      <text class="iconfont iconbofang"></text>
+      <text class="all-play-text">播放全部</text>
+    </view>
+    <text class="iconfont iconhuaban"></text>
+  </view>
+  <view class="music-list-container">
+    <MusicList
+      musicList="{{currentMusicList}}"
+      musicListWrapperHeight="{{100}}"
+      bindgetMusicIndex="getMusicIndex"
+      bindloadingMore="loadingMore"
+    ></MusicList>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+<view class="search-container">
+  <view class="search-header">
+    <text class="iconfont iconxingtaiduICON_sousuo--"></text>
+    <input type="text" value="{{searchContent}}" placeholder="{{defaultWord}}" bindinput="changeWord" />
+    <text class="clear" bindtap="clearInputValue">×</text>
+  </view>
+  <!-- 搜索歌曲列表 -->
+  <block wx:if="{{searchList.length !== 0}}">
+    <view class="music-list">
+      <view class="search-content">搜索内容: {{searchContent}}</view>
+      <view class="item" wx:for="{{searchList}}" wx:key="id">
+        <text class="iconfont iconxingtaiduICON_sousuo--"></text>
+        <text class="item-music-name">{{item.name}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <!-- 搜索历史 -->
+    <view class="history" wx:if="{{historyList.length}}">
+      <view class="history-title left">历史</view>
+      <scroll-view 
+        class="record-wrapper" 
+        scroll-x 
+        enable-flex
+      >
+        <view class="record-item" wx:for="{{historyList}}" wx:key="index">{{item}}</view>
+      </scroll-view>
+      <view 
+        class="iconfont icondelete right"
+        bindtap="deleteHistoryList"
+      ></view>
+    </view>
+    <!-- 热搜数据 -->
+    <view class="search-music-list">
+      <view class="list-title">热搜榜</view>
+      <view class="hot-wrapper">
+        <view class="hot-item" wx:for="{{hotMusicList}}" wx:key="searchKey">
+          <text class="order {{index < 3 ?'emp' : ''}} {{index >= 3 ? 'change-color' : ''}}">{{index + 1}}</text>
+          <view class="music-name-icon">
+            <text class="music-name {{index < 3 ? 'emp-font' : ''}}">{{item.searchWord}}</text>
+            <image class="music-icon" src="{{item.iconUrl}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

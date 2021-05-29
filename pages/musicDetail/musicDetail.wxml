@@ -1,0 +1,37 @@
+<view class="music-detail">
+  <view class="music-detail-header">{{musicDetailData.ar[0].name}}</view>
+  <!-- <view class="needle-wrapper">
+    <view class="circle"></view>
+    <image src="/static/images/song/needle.png"></image>
+  </view> -->
+  <view class="disc-container {{isPlay && 'disc-nimate'}}">
+    <image src="/static/images/song/disc.png" class="disc"></image>
+    <image src="{{musicDetailData.al.picUrl}}" class="music-bgc"></image>
+  </view>
+  <view class="progress-container">
+    <text class="start-time">{{currentTime}}</text>
+    <view class="progress">
+      <view class="progress-bar" style="width: {{bgcWidth}}rpx"></view>
+      <view class="progress-circle" style="left: {{bgcWidth}}rpx"></view>
+    </view>
+    <text class="total-time">{{totalTime}}</text>
+  </view>
+  <view class="play-operate">
+    <text class="iconfont iconliebiaoxunhuan"></text>
+    <text 
+      class="iconfont iconzuobofang"
+      bindtap="handleMusicChange"
+      id="pre"
+    ></text>
+    <text 
+      class="iconfont {{isPlay ? 'iconzanting' : 'iconbofang'}}"
+      bindtap="handlePlay"
+    ></text>
+    <text 
+      class="iconfont iconyoubofang"
+      bindtap="handleMusicChange"
+      id="next"
+    ></text>
+    <text class="iconfont iconbofangliebiao"></text>
+  </view>
+</view>

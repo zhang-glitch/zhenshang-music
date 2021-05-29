@@ -1,0 +1,84 @@
+<view class="index-container">
+  <view class="search">
+    <view class="login">
+      <image src="/static/images/logo.png" />
+    </view>
+    <view class="search-box" bindtap="toSearch">搜索音乐</view>
+    <view class="video-logo">
+      <image src="/static/images/video/video.jpg" />
+    </view>
+  </view>
+  <!-- banner图 -->
+  <swiper 
+    class="banner" 
+    indicator-dots 
+    indicator-color="ivory" 
+    indicator-active-color="#d43c33" 
+    autoplay 
+    interval="2000"
+    circular
+  >
+    <swiper-item class="banner-item" wx:for="{{bannerData}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 功能区域 -->
+  <view class="operate-container">
+    <view class="operate-item" bindtap="toRecommentSong">
+      <text class="iconfont iconmeirituijian-"></text>
+      <text class="operate-item-title">每日推荐</text>
+    </view>
+    <view class="operate-item">
+      <text class="iconfont icongedan"></text>
+      <text class="operate-item-title">歌单</text>
+    </view>
+    <view class="operate-item">
+      <text class="iconfont iconpaihangbang1"></text>
+      <text class="operate-item-title">排行榜</text>
+    </view>
+    <view class="operate-item">
+      <text class="iconfont icondiantai"></text>
+      <text class="operate-item-title">电台</text>
+    </view>
+    <view class="operate-item">
+      <text class="iconfont iconzhibobofangshexiangjiguankanxianxing"></text>
+      <text class="operate-item-title">直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲 -->
+  <view class="recommend-music">
+    <!-- 头部功能区 -->
+    <NavHeader title="推荐歌曲" description="为你精心推荐"></NavHeader>
+    <!-- 内容区域 -->
+    <scroll-view class="recommend-music-container" enable-flex scroll-x>
+      <view class="recommend-music-item" wx:for="{{recommentData}}" wx:key="id" wx:for-item="recommendItem">
+        <image src="{{recommendItem.picUrl}}"></image>
+        <text>{{recommendItem.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 歌曲排行 -->
+  <view class="music-rank">
+    <NavHeader title="排行榜" description="热歌风向标"></NavHeader>
+    <swiper 
+      class="rank-container" 
+      next-margin="60rpx" 
+      previous-margin="60rpx" 
+      circular
+    >
+      <swiper-item class="rank-item" wx:for="{{rankData}}" wx:key="name">
+        <view class="rank-item-wrapper">
+          <view class="rank-category">
+            <text>{{item.name}}</text>
+            <text class="iconfont iconyou"></text>
+          </view>
+          <view class="music-item" wx:for="{{item.rankList}}" wx:key="id" wx:for-item="rankItem">
+            <image src="{{rankItem.al.picUrl}}"></image>
+            <text class="order">{{index + 1}}</text>
+            <text class="music-name">{{rankItem.al.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

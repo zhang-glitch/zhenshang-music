@@ -1,0 +1,33 @@
+<view class="music-list">
+  <scroll-view
+    class="music-list-wrapper"
+    scroll-y
+    style="height: calc(100vh - {{musicListWrapperHeight}}rpx);" 
+    bindscrolltolower="handleToLower"
+  >
+    <view 
+      class="music-list-item"
+      wx:for="{{musicList}}"
+      wx:key="id"
+      id="{{item.id}}"
+      data-musicIndex="{{index}}"
+      bindtap="toMusicDetail"
+    >
+      <image src="{{item.album.blurPicUrl || item.al.picUrl}}"></image>
+      <view class="music-info">
+        <view class="info">
+          <view class="music-name">{{item.name}}</view>
+          <view class="songer">
+          <text>{{item.artists[0].name || item.ar[0].name}} {{item.album.name ? '-' : ''}} {{item.album.name}}</text>
+          <text class="line" wx:if="{{item.originSongSimpleData.artists[0].name}}"> | </text>
+          <text 
+            class="original-master" 
+            wx:if="{{item.originSongSimpleData.artists[0].name}}"
+          >原唱: {{item.originSongSimpleData.artists[0].name}}</text>
+          </view>
+        </view>
+        <text class="iconfont icongengduo"></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

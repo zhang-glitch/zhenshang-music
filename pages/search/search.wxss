@@ -1,0 +1,175 @@
+.search-container {
+  padding: 0 20rpx;
+}
+
+.search-header {
+  position: relative;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+}
+
+.search-header text {
+  vertical-align: top;
+}
+
+.search-header input {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  flex: 1;
+  border-bottom: 4rpx solid #ccc;
+}
+
+.search-header .clear {
+  position: absolute;
+  z-index: 2;
+  right: 10rpx;
+  font-size: 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 10rpx;
+}
+
+.search-music-list {
+  margin-top: 40rpx;
+}
+
+.search-music-list .list-title {
+  font-weight: 800;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 4rpx solid #eee;
+}
+
+.hot-wrapper {
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hot-wrapper .hot-item {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 15rpx 0;
+}
+
+.hot-item .order {
+  padding-right: 20rpx;
+}
+
+.hot-item .emp {
+  /* 加粗1-3的热门歌曲 */
+  color: red;
+}
+
+.hot-item .change-color {
+  color: #8c8c8c;
+}
+
+.hot-item .music-name-icon {
+  display: inline-block;
+  position: relative;
+}
+
+.music-name-icon .music-icon {
+  position: absolute;
+  width: 30rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+  top: 5rpx;
+}
+
+/* 加粗前三个歌曲 */
+.music-name-icon .emp-font {
+  font-weight: 800;
+}
+
+/* 搜索歌曲列表 */
+.music-list {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+}
+
+.music-list .search-content {
+  color: #d43c33;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #d43c33;
+  margin-left: -20rpx;
+}
+
+.music-list .item {
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.item .item-music-name {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  width: 100%;
+  border-bottom: 4rpx solid #eee;
+}
+
+/* 历史记录 */
+.history {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 40rpx;
+  display: flex;
+  /* margin-bottom: -20rpx; */
+}
+
+.history .history-title {
+  color: #000000;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 800;
+}
+
+.record-wrapper {
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  white-space: nowrap;
+  margin: 0 20rpx;
+  border-radius: 30rpx;
+  /* box-shadow: -20rpx 0 10rpx -10rpx #ededed, 20rpx 0 10rpx -0rpx #ededed; */
+}
+
+.record-wrapper .record-item {
+  box-sizing: border-box;
+  background: #ededed;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+}
+
+.history .left, .history .right {
+  width: 20%;
+  text-align: center;
+}
+
+.icondelete {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: #ccc;
+}

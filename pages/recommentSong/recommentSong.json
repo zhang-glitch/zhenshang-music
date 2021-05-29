@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "MusicList": "/components/MusicList/MusicList"
+  },
+  "navigationBarTitleText": "每日推荐",
+  "navigationBarBackgroundColor": "#91cdf6"
+}

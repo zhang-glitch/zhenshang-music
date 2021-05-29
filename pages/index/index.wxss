@@ -1,0 +1,174 @@
+/**index.wxss**/
+
+/* 搜索框 */
+.search {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+}
+
+.search .login image,
+.search .video-logo image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.search .search-box {
+  flex: 1;
+  border: 2rpx solid #ccc;
+  margin: 0 20rpx;
+  box-sizing: border-box;
+  border-radius: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #cbcbcc;
+}
+
+/*  banner图  */
+.index-container .banner {
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 功能区域 */
+.operate-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.operate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 48rpx;
+  color: #ffffff !important;
+  border-radius: 50%;
+  background: #f01313 !important;
+  text-align: center;
+}
+
+.operate-item-title {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+/* 推荐歌曲 */
+.recommend-music {
+  margin-top: 40rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.recommend-music-container {
+  display: flex;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+
+.recommend-music-container .recommend-music-item {
+  height: 300rpx;
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.recommend-music-container .recommend-music-item image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.recommend-music-container .recommend-music-item text {
+  font-size: 26rpx;
+  color: #666;
+  /* 多行文本溢出隐藏 省略号代替*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置对其模式*/
+  -webkit-line-clamp: 2; /*设置多行的行数*/
+}
+
+/* 排行榜 */
+.music-rank {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  margin-bottom: 60rpx;
+}
+
+.music-rank .rank-container {
+  box-sizing: boder-box;
+  height: 460rpx;
+  margin-top: 30rpx;
+}
+
+.rank-item {
+  margin-top: 10rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+
+.rank-item .rank-item-wrapper {
+  box-sizing: border-box;
+  background: #fbfbfb;
+  width: 92% !important;
+  height: 430rpx !important;
+  padding: 0 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx rgba(0, 0, 0, 0.1);
+}
+
+.rank-item-wrapper .rank-category {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.music-item {
+  display: flex;
+  padding-bottom: 20rpx;
+  /* align-items: center; */
+}
+
+.music-item image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+
+.music-rank .order {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.music-rank .music-name {
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconfont {
+  background: #fbfbff;
+  color: #000;
+  font-size: 40rpx;
+  vertical-align: middle;
+}

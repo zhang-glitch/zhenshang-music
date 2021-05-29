@@ -1,0 +1,23 @@
+.recomment-operate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  font-size: 32rpx;
+}
+
+.all-play .iconbofang {
+  color: #d43c33;
+  font-size: 40rpx;
+  vertical-align: bottom;
+}
+
+.all-play .all-play-text {
+  font-weight: 600;
+  padding-left: 10rpx;
+}
+
+.iconhuaban {
+  color: #000000;
+  font-size: 40rpx;
+}
